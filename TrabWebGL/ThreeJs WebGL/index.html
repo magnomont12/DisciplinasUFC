@@ -1,0 +1,307 @@
+<html>
+<head>
+    <title>threejs - basic</title>
+
+    <style>
+    	body{
+    		margin: 0;
+    		overflow: hidden;
+        }
+
+        canvas{
+            background: red;
+        }
+
+    </style>
+</head>
+<body>
+
+    <canvas id="myCanvas"></canvas>
+
+    <script src="three.js"></script>
+
+
+
+    <script>
+        var radius = 220, theta = 0;
+
+        //RENDERER
+        var renderer = new THREE.WebGLRenderer({canvas: document.getElementById('myCanvas'), antialias: true});
+        renderer.setClearColor(0x000000);
+        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        
+
+        var camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 3000);
+
+     
+        //SCENE
+        var scene = new THREE.Scene();
+
+        //LIGHTS
+        //var light = new THREE.AmbientLight(0xffffff, 0.2);
+        
+
+        var light = new THREE.HemisphereLight(0x0808dd, 0xffffff,  0.2);
+        scene.add(light);
+        
+        var light1 = new THREE.PointLight(0xf4f4f4, 0.7);
+
+        light1.position.z = 200;
+        light1.position.y = 200;
+
+        scene.add(light1);
+
+
+
+
+
+        //OBJECT
+        var geometry = new THREE.CubeGeometry(30, 10, 10);
+
+        var geometry2 = new THREE.CubeGeometry(10, 70, 10);
+
+        var geometry3 = new THREE.CubeGeometry(40, 10, 10);
+        
+        var geometry4 = new THREE.CubeGeometry(10, 20, 10);
+
+        var geometry5 = new THREE.CubeGeometry(10, 30, 10);
+
+        var geometry6 = new THREE.CubeGeometry(10, 50, 10);
+
+        var geometry7 = new THREE.CubeGeometry(10, 60, 10);
+
+        var geometry8 = new THREE.CubeGeometry(10, 10, 10);
+
+        var base = new THREE.CylinderGeometry(220, 300, 60, 8);
+
+        var caixa = new THREE.CylinderGeometry(300, 300, 180, 8);
+
+        var caixaWire = new THREE.CylinderGeometry(1500, 1500, 800, 8);
+
+        var chao = new THREE.PlaneGeometry(10000, 10000, 100, 100);
+
+  
+        
+        
+        var material = new THREE.MeshNormalMaterial({
+            color: 0xFF0000,
+            transparent: true,
+            opacity: 1,
+            wireframe: true
+        });
+
+        var materialBase0 = new THREE.MeshNormalMaterial({
+            color: 0xeeeeee,
+            transparent: true,
+            opacity: 0.8
+        });
+
+        var materialBase = new THREE.MeshLambertMaterial({
+            color: 0xf4f4f4,
+            emissive: 0xf4f4f4,
+            emissiveIntensity: 0.8,
+            transparent: true,
+            opacity: 1,
+            wireframe: true
+
+        });
+
+        var materialBase2 = new THREE.MeshStandardMaterial({
+            color: 0xf4f4f4,
+            roughness: 0.6,
+            metalness: 0.2
+
+        });
+
+        var materialBase3 = new THREE.MeshLambertMaterial({
+            color: 0xf4f4f4,
+            emissive: 0x00ffff,
+            emissiveIntensity: 0.2,
+            transparent: true,
+            opacity: 0.4
+        });
+
+
+
+        //F
+        var mesh = new THREE.Mesh(geometry, material);
+        mesh.position.set(-165, 0, -1000);
+
+        var mesh2 = new THREE.Mesh(geometry2, material);
+        mesh2.position.set(-185, 0, -1000);
+
+        var mesh3 = new THREE.Mesh(geometry3, material);
+        mesh3.position.set(-160, 30, -1000);
+
+        //E
+        var mesh4 = new THREE.Mesh(geometry, material);
+        mesh4.position.set(-105, 0, -1000);
+
+        var mesh5 = new THREE.Mesh(geometry2, material);
+        mesh5.position.set(-125, 0, -1000);
+
+        var mesh6 = new THREE.Mesh(geometry3, material);
+        mesh6.position.set(-100, 30, -1000);
+
+        var mesh7 = new THREE.Mesh(geometry3, material);
+        mesh7.position.set(-100, -30, -1000);
+
+        //R
+        var mesh8 = new THREE.Mesh(geometry2, material);
+        mesh8.position.set(-65, 0, -1000);
+
+        var mesh9 = new THREE.Mesh(geometry, material);
+        mesh9.position.set(-45, 0, -1000);
+
+        var mesh10 = new THREE.Mesh(geometry, material);
+        mesh10.position.set(-45, 30, -1000);
+
+        var mesh11 = new THREE.Mesh(geometry4, material);
+        mesh11.position.set(-25, 15, -1000);
+
+        var mesh12 = new THREE.Mesh(geometry5, material);
+        mesh12.position.set(-25, -20, -1000);
+
+        //I
+        var mesh13 = new THREE.Mesh(geometry6, material);
+        mesh13.position.set(5, 0, -1000);
+
+        var mesh14 = new THREE.Mesh(geometry, material);
+        mesh14.position.set(5, 30, -1000);
+
+        var mesh15 = new THREE.Mesh(geometry, material);
+        mesh15.position.set(5, -30, -1000);
+
+        //A
+        var mesh16 = new THREE.Mesh(geometry, material);
+        mesh16.position.set(55, 30, -1000);
+
+        var mesh17 = new THREE.Mesh(geometry, material);
+        mesh17.position.set(55, 0, -1000);
+
+        var mesh18 = new THREE.Mesh(geometry7, material);
+        mesh18.position.set(35, -5, -1000);
+
+        var mesh19 = new THREE.Mesh(geometry7, material);
+        mesh19.position.set(75, -5, -1000);
+
+        //S
+        var mesh20 = new THREE.Mesh(geometry, material);
+        mesh20.position.set(115, 30, -1000);
+
+        var mesh21 = new THREE.Mesh(geometry, material);
+        mesh21.position.set(115, 0, -1000);
+
+        var mesh22 = new THREE.Mesh(geometry, material);
+        mesh22.position.set(115, -30, -1000);
+
+        var mesh23 = new THREE.Mesh(geometry4, material);
+        mesh23.position.set(95, 15, -1000);
+
+        var mesh24 = new THREE.Mesh(geometry4, material);
+        mesh24.position.set(135, -15, -1000);        
+
+        var mesh25 = new THREE.Mesh(geometry8, material);
+        mesh25.position.set(95, -20, -1000);
+
+        var mesh26 = new THREE.Mesh(geometry8, material);
+        mesh26.position.set(135, 20, -1000); 
+
+
+        //base
+        var mesh27 = new THREE.Mesh(base, materialBase0);
+        mesh27.position.set(-20, -70, -1000); 
+
+        //caixa
+        var mesh28 = new THREE.Mesh(caixa, materialBase3);
+        mesh28.position.set(-20, -10, -1000);
+
+        //caixaWire
+        var mesh29 = new THREE.Mesh(caixaWire, materialBase);
+        mesh29.position.set(-20, -10, -1000);
+
+        //chao
+        var mesh30 = new THREE.Mesh(chao, materialBase2);
+	    mesh30.rotation.x = -90 * Math.PI / 180;
+	    mesh30.position.y = -412;
+        
+    
+        //F
+        scene.add(mesh);
+        scene.add(mesh2);
+        scene.add(mesh3);
+
+        //E
+        scene.add(mesh4);
+        scene.add(mesh5);
+        scene.add(mesh6);
+        scene.add(mesh7);
+
+        //R
+        scene.add(mesh8);
+        scene.add(mesh9);
+        scene.add(mesh10);
+        scene.add(mesh11);
+        scene.add(mesh12);
+
+        //I
+        scene.add(mesh13);
+        scene.add(mesh14);
+        scene.add(mesh15);
+
+        //A
+        scene.add(mesh16);
+        scene.add(mesh17);
+        scene.add(mesh18);
+        scene.add(mesh19);
+
+        //S
+        scene.add(mesh20);
+        scene.add(mesh21);
+        scene.add(mesh22);
+        scene.add(mesh23);
+        scene.add(mesh24);
+        scene.add(mesh25);
+        scene.add(mesh26);
+
+        //base
+        scene.add(mesh27);
+
+        //caixa
+        scene.add(mesh28);
+
+        //CaixaWire
+        scene.add(mesh29);
+
+        //chão
+	    scene.add(mesh30);
+
+
+        //RENDER LOOP
+        requestAnimationFrame(render);
+
+        function render() {
+            //mesh.rotation.x += 0.01;
+            //Base & Caixa
+            mesh27.rotation.y += 0.01;
+            mesh28.rotation.y += 0.01;
+
+            //Wire Base & Caixa           
+            //mesh29.rotation.y += 0.01;
+
+            
+             theta += 0.5;
+
+            camera.position.x = radius * Math.sin( THREE.Math.degToRad( theta ) );
+
+            camera.position.y = radius * Math.sin( THREE.Math.degToRad( theta ) );
+
+            camera.position.z = 1.5 * radius * Math.cos( THREE.Math.degToRad( theta ) ) ;
+
+            renderer.render(scene, camera);
+            requestAnimationFrame(render);
+        }
+    </script>
+</body>
+</html>
