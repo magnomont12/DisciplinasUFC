@@ -3,18 +3,16 @@
 ## Enunciado:
 
 <h4>Questão 1:</h4>Implementar uma lista estática encadeada (pseudo-encadeada) com as seguintes funções:
-- Criar a lista
-- Inserir o primeiro elemento;
-- Inserir um elemento qualquer (na próxima posição vazia e não no início da
-lista);
-- Retornar a quantidade de elementos presentes na lista;
-- Alterar um elemento passado como argumento da lista (Empregar uma
-função de busca);
-- Remoção de um determinado elemento (função busca);
-- Impressão dos elementos;
-- Posição de um determinado elemento na lista;
-- Testa se a lista é vazia ou não;
-- Busca de um determinado elemento.
+* Criar a lista
+* Inserir o primeiro elemento
+* Inserir um elemento qualquer (na próxima posição vazia e não no início da lista)
+* Retornar a quantidade de elementos presentes na lista
+* Alterar um elemento passado como argumento da lista (Empregar uma função de busca)
+* Remoção de um determinado elemento (função busca)
+* Impressão dos elementos
+* Posição de um determinado elemento na lista
+* Testa se a lista é vazia ou não
+* Busca de um determinado elemento
 
 Observem que vocês deverão utilizar uma lista auxiliar com as posições
 disponíveis na lista estática encadeada para simular os ponteiros de uma lista dinâmica.
