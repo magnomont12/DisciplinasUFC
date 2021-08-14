@@ -3,6 +3,7 @@
 ## Enunciado:
 
 <h4>Questão 1:</h4>Implementar uma lista estática encadeada (pseudo-encadeada) com as seguintes funções:
+
 * Criar a lista
 * Inserir o primeiro elemento
 * Inserir um elemento qualquer (na próxima posição vazia e não no início da lista)
