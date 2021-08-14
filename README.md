@@ -10,3 +10,6 @@ Você pode acessar os exemplos da disciplina no [GitHubPages](https://magnomont1
 
 ## Inteligência Artificial
 Disciplina de inteligência artificial, com intuito de ensinar padrões de projetos e algoritmos como: Máquina de estados finitos, Árvore de comportamento, menor caminho com A* e Dijasktra. Ao final da disciplina fomos orientados a estudar sobre otimizações e poderíamos escolher um trabalho para desenvolver. No meu caso, escolhi Algoritmo Genético, o resultado pode ser visto em [GitHubPages](https://magnomont12.github.io/DisciplinasUFC/). Na pasta da disciplina contém uma explicação sobre o que está aprendendo, como, significado e resultados.
+
+## Estrutura de Dados
+Disciplina ensinando as principais estruturas de dados, introdução a complexidade, algoritmos de ordenação e grafos. O Trabalho da disciplina tinha como objetivo simular a implementação de uma lista em C.
