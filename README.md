@@ -13,3 +13,6 @@ Disciplina de inteligência artificial, com intuito de ensinar padrões de proje
 
 ## Estrutura de Dados
 Disciplina ensinando as principais estruturas de dados, introdução a complexidade, algoritmos de ordenação e grafos. O Trabalho da disciplina tinha como objetivo simular a implementação de uma lista em C.
+
+## Visão Computacional
+Disciplina com foco em métodos de visão computacional, abordando assuntos como processamento morfológico, segmentação, extração de características, redução de dimensionalidade, reconhecimento de padrões, agrupamentos, redes neurais artificiais, validação, redes neurais covolucionais, detecção de faces e detecção de objetos. Seguindo referência do livro "Introdução a Visão Computacional. Uma abordagem prática com OpenCV e Python de Felipe Barelli."
