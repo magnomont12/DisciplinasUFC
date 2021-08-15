@@ -1,0 +1,39 @@
+<%  productsName = names
+    productsDescription = descriptions
+    productsPrice = prices %>
+
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+      <div class="card card-body text-center">
+        <p>Create an account or login</p>
+        <a href="/users/register" class="btn btn-primary btn-block mb-2"
+          >Register</a
+        >
+        <a href="/users/login" class="btn btn-secondary btn-block">Login</a>
+        <a href="/admin/login" class="btn btn-secondary btn-block">LoginAdmin</a>
+      </div>
+    </div>
+</div>
+
+  <div class="container">
+      <div class="row mt-5 justify-content-center">
+        <%for(a=0; a<productsName.length; a++){%>
+          <form action="/comprarProduto" method = "post">
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"><%= productsName[a]%></h5>
+                  <p class="card-text"><%= productsDescription[a]%></p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Valor: <%= productsPrice[a]%></li>
+                </ul>
+                <input type = "hidden" name = 'ProductID' value= <%= ids[a]%> />
+                <div class="card-body">
+                  <button type='submit' class="btn btn-primary btn-block">Comprar</button>
+                </div>
+            </div>
+          </form>
+          <%}%>
+      </div>
+  </div>

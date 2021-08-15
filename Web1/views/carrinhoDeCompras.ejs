@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row mt-5 justify-content-center">
+    <% products.forEach(product => { %>
+    <form action="/atualizarQuantidade/<%= product._id %>" method="post">
+      <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <h3><%=  product.name %></h3>
+        <div class="card-body">
+          <p class="card-text"><%= product.description%></p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Quantidade: 
+            <input type="number" value="<%= product.quant%>" id="quantidade" name="qnt" placeholder="Qnt" min=1>
+          </li>
+        </ul>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Valor: <%= product.price * product.quant%></li>
+        </ul>
+    <form action="/removerProdutoCarrinho/<%= product._id %>" method="POST">
+      <button type="submit"> Remover </button>
+    </form>
+      </div>
+    </form>
+    <%})%>
+  </div>
+    <form action="/finalizarCompra" method="POST">
+      <button type="submit"> Finalizar Compra </button>
+    </form>
+</div>

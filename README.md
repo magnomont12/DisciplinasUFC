@@ -16,3 +16,7 @@ Disciplina ensinando as principais estruturas de dados, introdução a complexid
 
 ## Visão Computacional
 Disciplina com foco em métodos de visão computacional, abordando assuntos como processamento morfológico, segmentação, extração de características, redução de dimensionalidade, reconhecimento de padrões, agrupamentos, redes neurais artificiais, validação, redes neurais covolucionais, detecção de faces e detecção de objetos. Seguindo referência do livro "Introdução a Visão Computacional. Uma abordagem prática com OpenCV e Python de Felipe Barelli."
+
+
+## Programação Web
+Disciplina ministrada em Java, entretanto o projeto final decidimos desenvolver um e-commerce utilizando Node e Mongo.
